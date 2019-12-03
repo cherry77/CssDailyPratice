@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="switchRegister()">Login</button>
+            <button type="button" class="toggle-btn" onclick="switchLogin()">Register</button>
+        </div>
+        <div class="social-icons">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <form id="login" action="" class="input-group">
+            <input type="text" class="input-field" placeholder="Username" required>
+            <input type="text" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <form id="register" action="" class="input-group">
+            <input type="text" class="input-field" placeholder="Username" required>
+            <input type="email" class="input-field" placeholder="Email" required>
+            <input type="text" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+
+</div>
+<script>
+    var loginBox = document.getElementById('login');
+    var registerBox = document.getElementById('register');
+    var switchBtn = document.getElementById('btn');
+
+    function switchLogin(){
+        loginBox.style.left = '-400px';
+        registerBox.style.left = '50px';
+        switchBtn.style.left = '110px';
+    }
+    function switchRegister(){
+        loginBox.style.left = '50px';
+        registerBox.style.left = '450px';
+        switchBtn.style.left = '0';
+    }
+</script>
+</body>
+</html>

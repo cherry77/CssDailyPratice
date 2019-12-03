@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container">
+    <img src="./../assets/bg2.jpg" alt="">
+    <div class="panel">
+        <div class="content login">
+            <div class="switch">
+                <span id="login" class="active">Login</span>
+                <span>/</span>
+                <span id="signup">Sign Up</span>
+            </div>
+            <form action="">
+                <div id="email" class="input" placeholder="Email">
+                    <input type="text">
+                </div>
+                <div class="input" placeholder="Username">
+                    <input type="text">
+                </div>
+                <div class="input" placeholder="Password">
+                    <input type="text">
+                </div>
+                <div id="repeat" class="input" placeholder="Repeat">
+                    <input type="text">
+                </div>
+                <span>Forget?</span>
+                <button>LOGIN</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $('#login').click(function(){
+        $('.switch span').removeClass('active');
+        $(this).addClass('active');
+
+        $(this).parents('.content').removeClass('signup');
+        $(this).parents('.content').addClass('login');
+    })
+    $('#signup').click(function(){
+        $('.switch span').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.content').removeClass('login');
+        $(this).parents('.content').addClass('signup');
+    })
+    $('.input input').on('focus', function(){
+        $(this).parent().addClass('focus');
+    })
+    $('.input input').on('blur', function(){
+        $(this).parent().removeClass('focus');
+    })
+</script>
+</body>
+</html>
