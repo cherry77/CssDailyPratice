@@ -1,0 +1,64 @@
+body{
+    background: darkseagreen;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.team-area{
+    padding: 125px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.team-container{
+    width: 1100px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.single-img{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    width: 325px;
+    height: 350px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.3);
+    overflow: hidden;
+    transform: translate(0, 0);
+    transition: .3s;
+}
+.single-img:hover{
+    transform: translate(0, -9px);
+}
+.img-one{
+    background: url('./../assets/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.img-text{
+    background: #fff;
+    padding: 0 10px 5px 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: translate(0, 130px);
+    line-height: 24px;
+    transition: .5s ease;
+    display: inline-block;
+}
+.img-text p i{
+    padding-right: 20px;
+}
+.img-text h4{
+    line-height: 16px;
+    padding: 0;
+    margin: 16px 0;
+    font-family: "big john";
+}
+.single-img:hover .img-text{
+    transform: translate(0, 0);
+}
