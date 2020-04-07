@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 120px;
+            background: #222;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            position: relative;
+            font-size: 120px;
+            color: #ccc7cc;
+        }
+        h1::after{
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            color: red;
+            clip-path: ellipse(100px 100px at 0% 50%);
+            /*background: url("./banner.png") no-repeat center center;*/
+            /*-webkit-background-clip: text;*/
+            /*-moz-background-clip: text;*/
+            /*background-clip: text;*/
+            animation: flash-move 6s infinite;
+        }
+        @keyframes flash-move {
+            0%{
+                clip-path: ellipse(100px 100px at 0% 50%);
+            }
+            50%{
+                clip-path: ellipse(100px 100px at 100% 50%);
+            }
+            100%{
+                clip-path: ellipse(100px 100px at 0% 50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 data-text="JavaScript">JavaScript</h1>
+</body>
+</html>
