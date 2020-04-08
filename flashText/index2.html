@@ -8,30 +8,27 @@
     <title>Document</title>
     <style>
         body{
-            margin-top: 120px;
-            background: #222;
-
             display: flex;
-            flex-direction: row;
+            min-height: 100vh;
             justify-content: center;
             align-items: center;
         }
         h1{
             position: relative;
-            font-size: 120px;
-            color: #ccc7cc;
+            font-size: 8rem;
         }
         h1::after{
             content: attr(data-text);
             position: absolute;
+            top: 0;
             left: 0;
             color: transparent;
             clip-path: ellipse(100px 100px at 0% 50%);
-            background: url("./banner.png") no-repeat center center;
+            background: url("banner.png") no-repeat center center;
             -webkit-background-clip: text;
             -moz-background-clip: text;
             background-clip: text;
-            animation: flash-move 6s infinite;
+            animation: flash-move 4s infinite;
         }
         @keyframes flash-move {
             0%{
@@ -47,6 +44,6 @@
     </style>
 </head>
 <body>
-    <h1 data-text="JavaScript">JavaScript</h1>
+    <h1 data-text="I Love you!">I Love you!</h1>
 </body>
 </html>
