@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      height: 200px;
+    }
+    .center{
+      height: 100px;
+      background: red;
+      width: 100%;
+      float: left;
+    }
+    .inner{
+      margin: 0 100px;/*给左右两边留出位置*/
+      background: orange;
+    }
+    .left{
+      height: 100px;
+      width: 100px;
+      background: green;
+      float: left;
+      margin-left: -100%;/*向左移动父元素的100%，现在位置到父盒子的起始位置*/
+    }
+    .right{
+      height: 100px;
+      width: 100px;
+      background: blue;
+      float: left;
+      margin-left: -100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- center不变，中间的盒子是inner -->
+    <div class="center">
+      <div class="inner">center</div>
+    </div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+</body>
+</html>
