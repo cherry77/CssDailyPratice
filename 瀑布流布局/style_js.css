@@ -1,0 +1,13 @@
+.wrapper{
+  position: relative;
+  width: 1200px;
+  /* 高度是撑开的，高度不给 */
+  margin: 0 auto;
+}
+.wf-item{
+  position: absolute;
+}
+.wf-item .wf-img{
+  width: 100%;
+  height: 100%;
+}

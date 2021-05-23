@@ -1,0 +1,11 @@
+.wrapper{
+  width: 1200px;
+  /* 高度是撑开的，高度不给 */
+  margin: 0 auto;
+  columns: 5; /* 列数 */
+  column-gap: 10px; /* 间隙宽度 */
+}
+.wf-item .wf-img{
+  width: 100%;
+  height: 100%;
+}

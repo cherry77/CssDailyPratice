@@ -1,0 +1,16 @@
+.wrapper{
+  width: 1200px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.wf-item{
+  margin: 10px;
+  width: calc(100%/5 - 20px);
+}
+.wf-item .wf-img{
+  width: 100%;
+  height: 100%;
+}
